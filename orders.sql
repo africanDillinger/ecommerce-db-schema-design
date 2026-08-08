@@ -1,0 +1,21 @@
+CREATE TABLE orders (
+    order_id            INTEGER PRIMARY KEY,
+    customer_id          VARCHAR(20) REFERENCES customers(customer_id),
+    order_date            DATE,
+    year                   INTEGER,
+    month                  INTEGER,
+    day                    INTEGER,
+    day_of_week           VARCHAR(15),    quarter                INTEGER,
+    season                 VARCHAR(20),
+    holiday_season         VARCHAR(10),
+    payment_method         VARCHAR(50),
+    device_type            VARCHAR(50),
+    traffic_source         VARCHAR(50),
+    shipping_method        VARCHAR(50),
+    warehouse_region       VARCHAR(50),
+    delivery_days          INTEGER,
+    order_status           VARCHAR(50),
+    returned                VARCHAR(5),
+    review_rating           NUMERIC(3,1),
+    high_value_order        VARCHAR(5)
+);
